@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "612170224200",
+    "firebase_url": "https://fir-auth-195b4.firebaseio.com",
+    "project_id": "fir-auth-195b4",
+    "storage_bucket": "fir-auth-195b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612170224200:android:0053473d4c470cf8",
+        "android_client_info": {
+          "package_name": "com.stunnningcoder.firebaseauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612170224200-6vd5tm3gsi2529j0h09rbbjurdscsetu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy8eAbCnM5y5NstzTy9mKIQ_Fvvbh_v9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612170224200-6vd5tm3gsi2529j0h09rbbjurdscsetu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

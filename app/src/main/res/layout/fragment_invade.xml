@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="invadeViewModel" type="com.stunnningcoder.firebaseauth.InvadeViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/clInvadeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@={invadeViewModel.user.email}"
+                android:hint="@string/hint_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:text="@={invadeViewModel.user.password}"
+                app:layout_constraintTop_toBottomOf="@id/etEmail"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:hint="@string/hint_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <ProgressBar
+                android:id="@+id/progress"
+                android:visibility="gone"
+                android:indeterminate="true"
+                app:layout_constraintTop_toBottomOf="@id/btnInvade"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+
+        <Button
+                android:id="@+id/btnInvade"
+                android:text="@string/text_login"
+                android:onClick="@{(view) -> invadeViewModel.doLogin()}"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/tvInvadeSuggestion"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:autoLink="web"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnInvade"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
